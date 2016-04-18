@@ -153,11 +153,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
+
   bcrypt (~> 3.1.7)
-=======
-  bootstrap-sass
->>>>>>> homepage
+
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)

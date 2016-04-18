@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+	before_action :no_double_login, only: [:new]
+
 	def index
 		@users = User.all
 	end

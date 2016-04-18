@@ -17,4 +17,10 @@ module SessionsHelper
   def logout
     @current_user = session[:user_id] = nil
   end
+
+  def no_double_login
+    if current_user
+      redirect_to root_path
+    end
+  end
 end

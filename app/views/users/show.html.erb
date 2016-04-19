@@ -1,1 +1,36 @@
-<h1>Welcome to <%= @user.first %> <%= @user.last %>'s profile.</h1>
+
+
+<!-- render user profile here -->
+<div class="container">
+	<h1 style="text-align: center;">Welcome to <%= @user.first %> <%= @user.last %>'s profile.</h1>
+	<div class="col-md-6 col-md-offset-3">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Profile
+			</div>
+
+			<div class="panel-body">
+				<p><strong>Email:</strong> <%= @user.email %></p>
+				<p><strong>Program:</strong> <%= @user.program %> <%= @user.cohort %></p>
+				<p><strong>Current title:</strong> <%= @user.current_title %></p>
+			</div> 
+		</div>
+	</div>
+</div>
+<!-- render cards here -->
+<h2 style="text-align: center;"> Cards go below here: </h2>
+<div class="container"> 
+<div class="col-md-6 col-md-offset-3">
+<% @cards.each do |card| %>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<strong>Type:</strong> <%= card.family %>
+		</div>
+		<div class="panel-body">
+			<p><strong>Title:</strong><br><%= card.title %> </p>
+			<p><strong>Description:</strong><br><%= card.working_on %> </p>
+		</div>
+	</div>
+<% end %>
+</div>
+</div>

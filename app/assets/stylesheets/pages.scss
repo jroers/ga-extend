@@ -22,8 +22,10 @@ $skill-share-shadow: #BB882B;
 .btn-filter {
 	font-family: 'DINBold';
 	border-radius: 0;
-	margin-bottom: 5px;
 	padding: 3px 12px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 126px;
 }
 
 .btn-networking {
@@ -65,4 +67,21 @@ $skill-share-shadow: #BB882B;
 
 .navbar-link {
 	border-left: 1px #dadada;
+}
+
+.card {
+	border: 1px solid black;
+	margin-bottom: 20px;
+}
+
+.project {
+	box-shadow: -5px 5px $project;
+}
+
+.networking {
+	box-shadow: -5px 5px $networking;
+}
+
+.skill_share {
+	box-shadow: -5px 5px $skill-share;
 }

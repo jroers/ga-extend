@@ -9,9 +9,16 @@
 	</div>
 </div>
 
-<div class="continer col-md-10 col-md-offset-1 ">
+<div class="continer">
 	<div cass="row"> 
-		<div class="block"> Cards will go here:
-		</div>
+		<% @cards.each do |card| %>
+			<div class="container col-md-4 col-sm-6 col-xs-12">
+				<div class="card <%= card.family %>">
+					<h5 class="title"><%= card.title %></h5>
+					<p><%= card.user.first %> <%= card.user.last %></p>
+					<p><%= card.user.current_title %></p>
+				</div>
+			</div>
+		<% end %>
 	</div>
 </div>

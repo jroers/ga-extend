@@ -6,44 +6,44 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Skill.create("name" => "Photoshop")
-Skill.create("name" => "Prototyping")
-Skill.create("name" => "Wireframing")
-Skill.create("name" => "Sketch")
-Skill.create("name" => "HTML/CSS")
-Skill.create("name" => "Invision")
-Skill.create("name" => "Marvel")
-Skill.create("name" => "jQuery")
-Skill.create("name" => "C++")
-Skill.create("name" => "React.js")
-Skill.create("name" => "Ruby")
-Skill.create("name" => "Ruby on Rails")
-Skill.create("name" => "Python")
-Skill.create("name" => "Panda Library")
-Skill.create("name" => "Scatter Plots")
-Skill.create("name" => "Scatter Matrices")
-Skill.create("name" => "Line Graphs")
-Skill.create("name" => "Box Plots")
-Skill.create("name" => "Histograms")
-Skill.create("name" => "Excel")
-Skill.create("name" => "User Research")
-Skill.create("name" => "Data Analysis")
-Skill.create("name" => "JavaScript")
-Skill.create("name" => "Java")
-Skill.create("name" => "Angular.js")
-Skill.create("name" => "Writer")
-Skill.create("name" => "SQL")
-Skill.create("name" => "Flinto")
-Skill.create("name" => "Marketing")
-Skill.create("name" => "User Behavior")
-Skill.create("name" => "Survey Creation")
-Skill.create("name" => "Personas")
-Skill.create("name" => "C#")
-Skill.create("name" => "Node.js")
-Skill.create("name" => "Photoshop")
+# Skill.create("name" => "Photoshop")
+# Skill.create("name" => "Prototyping")
+# Skill.create("name" => "Wireframing")
+# Skill.create("name" => "Sketch")
+# Skill.create("name" => "HTML/CSS")
+# Skill.create("name" => "Invision")
+# Skill.create("name" => "Marvel")
+# Skill.create("name" => "jQuery")
+# Skill.create("name" => "C++")
+# Skill.create("name" => "React.js")
+# Skill.create("name" => "Ruby")
+# Skill.create("name" => "Ruby on Rails")
+# Skill.create("name" => "Python")
+# Skill.create("name" => "Panda Library")
+# Skill.create("name" => "Scatter Plots")
+# Skill.create("name" => "Scatter Matrices")
+# Skill.create("name" => "Line Graphs")
+# Skill.create("name" => "Box Plots")
+# Skill.create("name" => "Histograms")
+# Skill.create("name" => "Excel")
+# Skill.create("name" => "User Research")
+# Skill.create("name" => "Data Analysis")
+# Skill.create("name" => "JavaScript")
+# Skill.create("name" => "Java")
+# Skill.create("name" => "Angular.js")
+# Skill.create("name" => "Writer")
+# Skill.create("name" => "SQL")
+# Skill.create("name" => "Flinto")
+# Skill.create("name" => "Marketing")
+# Skill.create("name" => "User Behavior")
+# Skill.create("name" => "Survey Creation")
+# Skill.create("name" => "Personas")
+# Skill.create("name" => "C#")
+# Skill.create("name" => "Node.js")
+# Skill.create("name" => "Photoshop")
 
-User.destroy_all
 Card.destroy_all
+User.destroy_all
 
 user1_data = {
 	first: 'test',
@@ -61,7 +61,7 @@ user2_data = {
 	password: '123',
 	program: 'UXDI',
 	cohort: '5',
-	current_title: ''
+	current_title: 'UX Designer'
 }
 user3_data = {
 	first: 'Cindy',
@@ -70,7 +70,7 @@ user3_data = {
 	password: '123',
 	program: 'WDI',
 	cohort: '32',
-	current_title: ''
+	current_title: 'Web Developer | Product Manager'
 }
 user4_data = {
 	first: 'Stephen',
@@ -79,7 +79,7 @@ user4_data = {
 	password: '123',
 	program: 'DA',
 	cohort: '1',
-	current_title: ''
+	current_title: 'Data Scientist'
 }
 user5_data = {
 	first: 'Curt',
@@ -88,7 +88,7 @@ user5_data = {
 	password: '123',
 	program: 'PMI',
 	cohort: '3',
-	current_title: ''
+	current_title: 'Product Manager'
 }
 user6_data = {
 	first: 'Ryan',
@@ -97,7 +97,7 @@ user6_data = {
 	password: '123',
 	program: 'PMI',
 	cohort: '3',
-	current_title: ''
+	current_title: 'Product Manager'
 }
 user7_data = {
 	first: 'Marco',
@@ -106,7 +106,7 @@ user7_data = {
 	password: '123',
 	program: 'PMI',
 	cohort: '3',
-	current_title: ''
+	current_title: 'Product Manager'
 }
 user8_data = {
 	first: 'Harry',
@@ -115,7 +115,7 @@ user8_data = {
 	password: '123',
 	program: 'UXDI',
 	cohort: '3',
-	current_title: ''
+	current_title: 'UX Designer'
 }
 user9_data = {
 	first: 'Stacey',
@@ -124,7 +124,7 @@ user9_data = {
 	password: '123',
 	program: 'PMI',
 	cohort: '3',
-	current_title: ''
+	current_title: 'Product Manager'
 }
 user1= User.create(user1_data)
 user2= User.create(user2_data)
@@ -174,7 +174,7 @@ card7a_data = {
 }
 card8a_data = {
 	family: 'networking',
-	title: 'abysitting opportunities - qualifications needed',
+	title: 'Babysitting opportunities - qualifications needed',
 	working_on: 'Potrero Hill parent association.  Contact me if you are interested in babysitting.',
 }
 

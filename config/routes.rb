@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   get '/cards', to: 'cards#index', as: 'cards'
   get '/cards', to: 'cards#new', as: 'new_card'
-  post '/cards', to: 'cards#creaete'
+  post '/cards', to: 'cards#create'
   get '/cards/:id', to: 'cards#show', as: 'card'
   get '/cards/:id/edit', to: 'cards#edit', as: 'edit_card'
   patch '/cards/:id', to:'cards#update'

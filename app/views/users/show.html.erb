@@ -20,6 +20,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- modal html -->
 <div class="modal fade" id='<%= "editProfileModal_#{current_user.id}" %>' role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -38,16 +39,11 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-
-
 <!-- render cards here, inline style is temperary -->
 <h2 style="text-align: center;"> Cards go below here: <br>
 <%= button_to "Add new card", "#", class: "btn btn-warning" %></h2>
 <div class="container"> 
-
-	
 	<div class="col-md-6 col-md-offset-3 block">
-
 		<% @cards.each do |card| %>
 			<div class="panel panel-default">
 				<div class="panel-heading">

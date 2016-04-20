@@ -1,0 +1,54 @@
+<%= form_for(user) do |f| %>
+    <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+    <!-- left side of modal -->
+	    <div class="col-md-5">
+	    	  <%= f.label :first %>
+	        <br>
+	        <%= f.text_field :first %>
+	        <br>
+	        <%= f.label :last %>
+	        <br>
+	        <%= f.text_field :last %>
+	        <br>
+	        <%= f.label :email %>
+	        <br>
+	        <%= f.text_field :email %>
+	    </div>
+	    <!-- right side of modal -->
+	    <div class="col-md-5 col-md-offset-1">
+	    		<br>
+	    	  <%= f.label :program %>
+	        <br>
+	        <%= f.text_field :program %>
+	        <br>
+	        <%= f.label :cohort %>
+	        <br>
+	        <%= f.text_field :cohort %>
+	        <br>
+	    </div>
+
+	    <div class="col-md-8">
+	    		<br>
+	    		<%= f.label :current_title %>
+	        <br>
+	        <%= f.text_area :current_title , class: "textBoxArea"%>
+	    </div>
+    </div>
+    <div class="panel-footer">
+        <%= f.submit "Save", class: 'btn btn-success' %>
+    </div>
+  <% end %>
+    </div>

@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find_by_id(params[:id])
-		@cards = @user.cards
+		@cards = @user.cards || Card.new()
 	end
 
 	private

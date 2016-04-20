@@ -18,11 +18,29 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find_by_id(params[:id])
 		@cards = @user.cards
+		@card = Card.new()
+	end
+
+	def edit
+		@user = User.find_by_id(params[:id])	
+	end
+
+	def update
+		@user = User.find_by_id(params[:id])
+		@user.update_attributes(update_user_params)
+		redirect_to user_path(@user.id)
+	end
+
+	def destroy
 	end
 
 	private
 
 	def user_params
 		params.require(:user).permit(:first,:last,:email,:password)
+	end
+
+	def update_user_params
+		params.require(:user).permit(:first, :last, :email, :program, :cohort, :current_title)
 	end
 end

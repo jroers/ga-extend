@@ -2,16 +2,67 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$networking: rgb(204,94,80);
+$networking-shadow: #A74134;
+$project: rgb(121,203,118);
+$project-shadow: #548E52;
+$skill-share: rgb(225,164,54);
+$skill-share-shadow: #BB882B;
+@font-face {
+	font-family: 'DINBold';
+	src: url(asset-path('fonts/din-bold.ttf'));
+}
 
 .btn {
 	position: relative;
 	display: inline-block;
 	margin-right: 10px;
-
 }
+
+.btn-filter {
+	font-family: 'DINBold';
+	border-radius: 0;
+	margin-bottom: 5px;
+	padding: 3px 12px;
+}
+
+.btn-networking {
+	background: $networking;
+	box-shadow: 0 5px $networking-shadow;
+}
+
+.btn-project {
+	background: $project;
+	box-shadow: 0 5px $project-shadow;
+}
+
+.btn-skill-share {
+	background: $skill-share;
+	box-shadow: 0 5px $skill-share-shadow;
+}
+
+.btn-all {
+	background: #D4D4D4;
+	border-color: #D4D4D4;
+	box-shadow: 0 5px #A2A2A2;
+}
+
+.btn-all:hover {
+		background: #A5A5A5;
+		border-color: #A5A5A5;
+		box-shadow: 0 5px #7D7D7D;
+	}
 
 .block{
 	border: 1px solid black;
 	min-height: 600px;
 	text-align: center;
+}
+
+.centered {
+	text-align:center;
+}
+
+.navbar-link {
+	border-left: 1px #dadada;
 }

@@ -8,6 +8,7 @@ $project: rgb(121,203,118);
 $project-shadow: #548E52;
 $skill-share: rgb(225,164,54);
 $skill-share-shadow: #BB882B;
+$card-border: rgb(194, 209, 223);
 @font-face {
 	font-family: 'DINBold';
 	src: url(asset-path('fonts/din-bold.ttf'));
@@ -70,18 +71,44 @@ $skill-share-shadow: #BB882B;
 }
 
 .card {
-	border: 1px solid black;
+	border: 1px solid $card-border;
 	margin-bottom: 20px;
 }
 
 .project {
-	box-shadow: -5px 5px $project;
+	box-shadow: 0 3px $project-shadow;
+	border-bottom: 1px solid $project-shadow;
 }
 
 .networking {
-	box-shadow: -5px 5px $networking;
+	box-shadow: 0 3px $networking-shadow;
+	border-bottom: 1px solid $networking-shadow;
 }
 
 .skill_share {
-	box-shadow: -5px 5px $skill-share;
+	box-shadow: 0 3px $skill-share-shadow;
+	border-bottom: 1px solid $skill-share-shadow;
+}
+
+.flag {
+	font-family: 'DINBold';
+	font-size: 11px;
+	color: white;
+	margin: 0;
+	margin-top: 10px;
+	margin-right: -5px;
+	padding: 3px 8px;
+	box-shadow: 3px 3px 5px rgb(200,200,200);
+}
+
+.flag-project {
+	background: $project;
+}
+
+.flag-networking {
+	background: $networking;
+}
+
+.flag-skill_share {
+	background: $skill-share;
 }

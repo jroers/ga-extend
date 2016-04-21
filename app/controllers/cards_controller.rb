@@ -33,8 +33,8 @@ class CardsController < ApplicationController
 	end
 
 	def destroy
-		card = get_card
-		card.destroy
+		@card = get_card
+		@card.destroy
 		redirect_to user_path(current_user)
 	end
 

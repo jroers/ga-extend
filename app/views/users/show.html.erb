@@ -9,9 +9,16 @@
 				Profile
 			</div>
 			<div class="panel-body">
+				<div class="col-md-3"> 
+					<% if @user.image? %>
+						<%= image_tag @user.image.url(:thumb) %>
+						<% end %>
+				</div>
+				<div class="col-md-6 col-md-offset-1">
 				<p><strong>Email:</strong> <%= @user.email %></p>
 				<p><strong>Program:</strong> <%= @user.program %> <%= @user.cohort %></p>
 				<p><strong>Current title:</strong> <%= @user.current_title %></p>
+				</div>
 			</div>
 			<div class="panel-footer">
 			<!-- modal button -->
@@ -45,7 +52,7 @@
 	<%= link_to "Add new Card", "#", class: 'btn btn-warning', 'data-target' => "#newCardModal_#{current_user.id}", 'data-toggle' => 'modal'  %>
 
 <div class="container"> 
-	<div class="col-md-6 col-md-offset-3 block">
+	<div class="col-md-6 col-md-offset-3">
 		<% @cards.each do |card| %>
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -56,7 +63,8 @@
 				<p><strong>Description:</strong><br><%= card.working_on %> </p>
 			</div>
 			<div class="panel-footer">
-				<%= button_to "Edit card", "#", class: "btn btn-warning" %>
+				<%= link_to "Edit card", "#", class: "btn btn-warning" %>
+				<%= link_to "Delete card", delete_card_path(card.id), method: :delete, class: "btn btn-danger" %>
 			</div>
 			</div>
 		<% end %>

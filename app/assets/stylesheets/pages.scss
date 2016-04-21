@@ -75,17 +75,17 @@ $card-border: rgb(194, 209, 223);
 	margin-bottom: 20px;
 }
 
-.project {
+.card.project {
 	box-shadow: 0 3px $project-shadow;
 	border-bottom: 1px solid $project-shadow;
 }
 
-.networking {
+.card.networking {
 	box-shadow: 0 3px $networking-shadow;
 	border-bottom: 1px solid $networking-shadow;
 }
 
-.skill_share {
+.card.skill_share {
 	box-shadow: 0 3px $skill-share-shadow;
 	border-bottom: 1px solid $skill-share-shadow;
 }

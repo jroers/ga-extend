@@ -9,10 +9,10 @@
 	</div>
 </div>
 
-<div class="continer">
-	<div cass="row"> 
+<div class="container">
+	<div class="row cards"> 
 		<% @cards.each do |card| %>
-			<div class="container col-md-4 col-sm-6 col-xs-12">
+			<div class="container col-md-4 col-sm-6 col-xs-12 <%= card.family %>">
 				<div class="card <%= card.family %>">
 					<h5 class="flag flag-<%= card.family %> pull-right">
 						<% if card.family == "skill_share" %>

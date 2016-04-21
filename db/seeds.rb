@@ -52,7 +52,9 @@ user1_data = {
 	password: '123',
 	program: 'WDI',
 	cohort: '25',
-	current_title: 'Grand Master'
+	current_title: 'Grand Master',
+	city: 'San Francisco',
+	state: 'CA'
 }
 user2_data = {
 	first: 'Alex',
@@ -61,7 +63,9 @@ user2_data = {
 	password: '123',
 	program: 'UXDI',
 	cohort: '5',
-	current_title: 'UX Designer'
+	current_title: 'UX Designer',
+	city: 'San Francisco',
+	state: 'CA'
 }
 user3_data = {
 	first: 'Cindy',
@@ -70,7 +74,9 @@ user3_data = {
 	password: '123',
 	program: 'WDI',
 	cohort: '32',
-	current_title: 'Web Developer | Product Manager'
+	current_title: 'Web Developer | Product Manager',
+	city: 'San Francisco',
+	state: 'CA'
 }
 user4_data = {
 	first: 'Stephen',
@@ -79,7 +85,9 @@ user4_data = {
 	password: '123',
 	program: 'DA',
 	cohort: '1',
-	current_title: 'Data Scientist'
+	current_title: 'Data Scientist',
+	city: 'San Francisco',
+	state: 'CA'
 }
 user5_data = {
 	first: 'Curt',
@@ -88,7 +96,9 @@ user5_data = {
 	password: '123',
 	program: 'PMI',
 	cohort: '3',
-	current_title: 'Product Manager'
+	current_title: 'Product Manager',
+	city: 'San Francisco',
+	state: 'CA'
 }
 user6_data = {
 	first: 'Ryan',
@@ -97,7 +107,9 @@ user6_data = {
 	password: '123',
 	program: 'PMI',
 	cohort: '3',
-	current_title: 'Product Manager'
+	current_title: 'Product Manager',
+	city: 'San Francisco',
+	state: 'CA'
 }
 user7_data = {
 	first: 'Marco',
@@ -106,7 +118,9 @@ user7_data = {
 	password: '123',
 	program: 'PMI',
 	cohort: '3',
-	current_title: 'Product Manager'
+	current_title: 'Product Manager',
+	city: 'San Francisco',
+	state: 'CA'
 }
 user8_data = {
 	first: 'Harry',
@@ -115,7 +129,9 @@ user8_data = {
 	password: '123',
 	program: 'UXDI',
 	cohort: '3',
-	current_title: 'UX Designer'
+	current_title: 'UX Designer',
+	city: 'San Francisco',
+	state: 'CA'
 }
 user9_data = {
 	first: 'Stacey',
@@ -124,7 +140,9 @@ user9_data = {
 	password: '123',
 	program: 'PMI',
 	cohort: '3',
-	current_title: 'Product Manager'
+	current_title: 'Product Manager',
+	city: 'San Francisco',
+	state: 'CA'
 }
 user1= User.create(user1_data)
 user2= User.create(user2_data)

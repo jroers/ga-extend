@@ -14,6 +14,13 @@
 		<% @cards.each do |card| %>
 			<div class="container col-md-4 col-sm-6 col-xs-12">
 				<div class="card <%= card.family %>">
+					<h5 class="flag flag-<%= card.family %> pull-right">
+						<% if card.family == "skill_share" %>
+							SKILL SHARE
+						<% else %>
+							<%= card.family.upcase %>
+						<% end %>
+					</h5>
 					<h5 class="title"><%= card.title %></h5>
 					<p><%= card.user.first %> <%= card.user.last %></p>
 					<p><%= card.user.current_title %></p>

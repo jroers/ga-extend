@@ -73,6 +73,7 @@ $card-border: rgb(194, 209, 223);
 .card {
 	border: 1px solid $card-border;
 	margin-bottom: 20px;
+	padding-left: 60px;
 }
 
 .card.project {
@@ -111,4 +112,25 @@ $card-border: rgb(194, 209, 223);
 
 .flag-skill_share {
 	background: $skill-share;
+}
+
+.location {
+	color: rgb(186, 186, 186);
+	margin-right: 15px;
+}
+
+.avatar-thumb {
+	max-width: 70px;
+	max-height: 70px;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: -10px;
+	top: 15px;
+}
+
+hr {
+	margin: 5px 0;
+	margin-right: 15px;
+	border-top: 1px solid rgb(150,150,150);
 }

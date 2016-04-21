@@ -31,6 +31,12 @@ class UsersController < ApplicationController
 		redirect_to user_path(@user.id)
 	end
 
+	def delete_photo
+		@user = User.find_by_id(params[:id])
+		@user.image.destroy
+		redirect_to user_path(@user.id)
+	end
+
 	def destroy
 	end
 
@@ -41,6 +47,6 @@ class UsersController < ApplicationController
 	end
 
 	def update_user_params
-		params.require(:user).permit(:first, :last, :email, :program, :cohort, :current_title)
+		params.require(:user).permit(:first, :last, :email, :program, :cohort, :current_title, :image)
 	end
 end

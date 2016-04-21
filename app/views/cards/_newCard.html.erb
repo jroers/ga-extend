@@ -2,7 +2,6 @@
     <% if @card.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@card.errors.count, "error") %> prohibited this user from being saved:</h2>
-
           <ul>
             <% @card.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
@@ -15,7 +14,7 @@
     <div class="panel-body">
         <%= f.label :family %>
         <br>
-        <%= f.text_field :family %>
+        <%= f.select :family, [['Project', 'project'], ['Skill Share', 'skill share'], ['Networking','networking']] %>
         <br>
         <%= f.label :title %>
         <br>

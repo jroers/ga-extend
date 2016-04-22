@@ -1,4 +1,4 @@
-$(document).ready(function() {
+function renderCards() {
 	$cards = $(".cards .container");
 	$networking = $(".container.networking");
 	$project = $(".container.project");
@@ -27,4 +27,8 @@ $(document).ready(function() {
 		$cards.remove();
 		$(".cards").append($cards);
 	});
-});
+}
+
+$(document).on('page:load', renderCards);
+
+$(document).ready(renderCards);

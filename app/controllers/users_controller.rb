@@ -19,8 +19,6 @@ class UsersController < ApplicationController
 		@user = User.find_by_id(params[:id])
 		@cards = @user.cards.order("created_at DESC")
 		@card = Card.find_by_id(params[:card_id]) || Card.new()
-		@card_edit = Card.find_by_id(params[:id])
-
 	end
 
 	def find_card

@@ -15,6 +15,7 @@
 					<% else %>
 						<%= image_tag "/assets/default.png", size: "150" %>
 					<% end %>
+					<%= link_to 'Delete Photo', delete_photo_path, method: :put %>
 				</div>
 				<div class="col-md-6 col-md-offset-1">
 				<p><strong>Email:</strong> <%= @user.email %></p>

@@ -19,8 +19,6 @@ class UsersController < ApplicationController
 		@user = User.find_by_id(params[:id])
 		@cards = @user.cards.order("created_at DESC")
 		@card = Card.find_by_id(params[:card_id]) || Card.new()
-		@card_edit = Card.find_by_id(params[:id])
-
 	end
 
 	def find_card
@@ -39,7 +37,8 @@ class UsersController < ApplicationController
 
 	def delete_photo
 		@user = User.find_by_id(params[:id])
-		@user.image.destroy
+		@user.image = nil 
+		@user.save
 		redirect_to user_path(@user.id)
 	end
 

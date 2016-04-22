@@ -17,10 +17,14 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find_by_id(params[:id])
-		@cards = @user.cards
-		@card = Card.new()
+		@cards = @user.cards.order("created_at DESC")
+		@card = Card.find_by_id(params[:card_id]) || Card.new()
 		@card_edit = Card.find_by_id(params[:id])
 
+	end
+
+	def find_card
+		@card = Card.find(:card)
 	end
 
 	def edit

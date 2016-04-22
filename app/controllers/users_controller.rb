@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 		@cards = @user.cards
 		@card = Card.new()
 		@card_edit = Card.find_by_id(params[:id])
+
 	end
 
 	def edit

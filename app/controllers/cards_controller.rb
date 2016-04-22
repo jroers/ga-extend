@@ -24,6 +24,7 @@ class CardsController < ApplicationController
 
 	def edit
 		@card = get_card
+		render :partial => "editCard"
 	end
 
 	def update

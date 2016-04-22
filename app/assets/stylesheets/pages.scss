@@ -17,6 +17,10 @@ $card-border: rgb(194, 209, 223);
 	font-family: 'GABold';
 	src: url(asset-path('fonts/PFDinTextCompPro-Bold.ttf'));
 }
+@font-face {
+	font-family: 'Georgia';
+	src: url(asset-path('fonts/Georgia.ttf'));
+}
 .btn {
 	position: relative;
 	display: inline-block;
@@ -154,5 +158,10 @@ hr {
 	font-family: 'GABold';
 	font-weight: lighter;
 	font-size: 18px;
-	margin-bottom: 3px;
+	margin-bottom: 0;
+}
+
+.current-position {
+	font-family: 'Georgia';
+	font-size: 18px;
 }

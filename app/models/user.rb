@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 	has_many :user_skills
 	has_many :skills, through: :user_skills
 
-	has_attached_file :image, styles: { medium: "300x300>", thumb: "150x150>" }, default_url: "/images/default.png"
+	has_attached_file :image, styles: { medium: "300x300>", thumb: "125x125>" }, default_url: "/images/default.png"
 
 	validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 

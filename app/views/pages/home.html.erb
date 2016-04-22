@@ -21,10 +21,10 @@
 							<%= card.family.upcase %>
 						<% end %>
 					</h5>
-					<h5 class="title"><%= card.title %></h5>
+					<h5 class="title"><%= card.title.upcase %></h5>
 					<hr>
 					<p class="location pull-right"><span class="glyphicon glyphicon-map-marker"></span> <%= card.user.city.upcase %>, <%= card.user.state.upcase %></p>
-					<p><%= card.user.first %> <%= card.user.last %></p>
+					<p class="name"><%= card.user.first.upcase %> <%= card.user.last.upcase %></p>
 					<p><%= card.user.current_title %></p>
 					<img src="/assets/default.png" class="avatar-thumb">
 				</div>

@@ -53,11 +53,6 @@
 <!-- new card modal button -->
 	<%= link_to "Add new Card", "#", class: 'btn btn-warning', 'data-target' => "#newCardModal", 'data-toggle' => 'modal'  %>
 
-
-
-
-
-
 <div class="container"> 
 	<div class="col-md-6 col-md-offset-3">
 		<% @cards.each do |card| %>
@@ -79,8 +74,8 @@
 		<% end %>
 	</div>
 </div>
-<!-- edit card modal -->
 
+<!-- edit card modal -->
 		<div class="modal fade" id='<%= "editCardModal" %>' role="dialog" aria-labelledby="editCardModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
@@ -89,10 +84,7 @@
 		        <h4 class="modal-title" id="newCardModalLabel">Edit Card</h4>
 		      </div>
 		      <div class="modal-body">
-		      
-		      	<%= @card.id %>
-		        <%= render 'cards/editCard', card: @card.id %>
-		      
+		        <%= render 'cards/editCard', card: @card.id %>		      
 		      </div>
       		<div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -100,15 +92,6 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
-
-
-
-
-
-
-
-
 
 <!-- new card modal html -->
 <div class="modal fade" id='<%= "newCardModal" %>' role="dialog" aria-labelledby="newCardModalLabel" aria-hidden="true">
@@ -127,6 +110,3 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
-
-

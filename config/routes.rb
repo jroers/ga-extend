@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show', as: 'user'
   get '/users/:id/edit', to: 'users#eidt', as: 'edit_user'
   patch '/users/:id', to: 'users#update'
+  put '/user/:id', to: 'users#delete_photo', as: 'delete_photo'
   delete '/users/:id', to: 'users#destroy', as: 'delete_user'
 
   get '/login', to: 'sessions#new', as: 'login'

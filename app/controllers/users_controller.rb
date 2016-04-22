@@ -37,7 +37,8 @@ class UsersController < ApplicationController
 
 	def delete_photo
 		@user = User.find_by_id(params[:id])
-		@user.image.destroy
+		@user.image = nil 
+		@user.save
 		redirect_to user_path(@user.id)
 	end
 

@@ -11,11 +11,12 @@
 			<div class="panel-body">
 				<div class="col-md-4"> 
 					<% if @user.image? %>
-						<%= image_tag @user.image.url(:thumb) %>
+						<%= image_tag @user.image.url(:thumb) %> <br>
+						<%= link_to 'Delete Photo', delete_photo_path, method: :put %>
 					<% else %>
 						<%= image_tag "/assets/default.png", size: "150" %>
 					<% end %>
-					<%= link_to 'Delete Photo', delete_photo_path, method: :put %>
+
 				</div>
 				<div class="col-md-6 col-md-offset-1">
 				<p><strong>Email:</strong> <%= @user.email %></p>

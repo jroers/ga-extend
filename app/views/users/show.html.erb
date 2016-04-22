@@ -3,13 +3,13 @@
 <!-- inline style is temporary -->
 	<h1 style="text-align: center;">Welcome to <%= @user.first %> <%= @user.last %>'s profile.
 	</h1>
-	<div class="col-md-6 col-md-offset-3">
+	<div class="col-md-8 col-md-offset-2">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				Profile
 			</div>
 			<div class="panel-body">
-				<div class="col-md-3"> 
+				<div class="col-md-4"> 
 					<% if @user.image? %>
 						<%= image_tag @user.image.url(:thumb) %>
 					<% else %>
@@ -72,7 +72,7 @@
 				<p> card id: <%= card.id %> </p>
 			</div>
 			<div class="panel-footer">
-				<%= link_to "Edit Card", edit_card_path(card.id), class: 'btn btn-warning' %>
+				<%= link_to "Edit Card", edit_card_path(card.id), class: 'btn btn-warning', 'data-target' => "#editCardModal", 'data-toggle' => 'modal' %>
 				<%= link_to "Delete Card", delete_card_path(card.id), method: :delete, class: "btn btn-danger" %>
 			</div>
 			</div>

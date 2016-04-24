@@ -37,9 +37,17 @@ $card-border: rgb(194, 209, 223);
 	width: 140px;
 }
 
+.active {
+	color: black;
+}
+
 .btn-networking {
 	background: $networking;
 	box-shadow: 0 5px $networking-shadow;
+}
+
+.btn.btn-networking.active {
+	color: black;
 }
 
 .btn-project {
@@ -47,9 +55,17 @@ $card-border: rgb(194, 209, 223);
 	box-shadow: 0 5px $project-shadow;
 }
 
+.btn.btn-project.active {
+	color: black;
+}
+
 .btn-skill-share {
 	background: $skill-share;
 	box-shadow: 0 5px $skill-share-shadow;
+}
+
+.btn.btn-skill-share.active {
+	color: black;
 }
 
 .btn-all {
@@ -59,16 +75,16 @@ $card-border: rgb(194, 209, 223);
 }
 
 .btn-all:hover {
-	background: #A5A5A5;
+	background: #B9B9B9;
 	border-color: #A5A5A5;
 	color: white;
-	box-shadow: 0 5px #7D7D7D;
+	// box-shadow: 0 5px #7D7D7D;
 }
 
-.btn-all:active {
-	background: #D4D4D4;
-	border-color: #D4D4D4;
-	color: white;
+.btn-all.active {
+	background: #A5A5A5;
+	border-color: #A5A5A5;
+	color: black;
 }
 
 .block{

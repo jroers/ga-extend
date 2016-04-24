@@ -42,7 +42,7 @@ class CardsController < ApplicationController
 	private
 
 	def get_card
-		Card.find_by_id(params[:id])
+		Card.find_by_id(params[:id]) 
 	end
 
 	def card_params

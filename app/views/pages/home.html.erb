@@ -21,6 +21,7 @@
 							<%= card.family.upcase %>
 						<% end %>
 					</h5>
+					<p> <%= link_to "show card", card_path(card.id), 'data-target' => "#showCardModal", 'data-toggle' => 'modal' %> </p>
 					<h5 class="title"><%= card.title.upcase %></h5>
 					<hr>
 					<p class="location pull-right"><span class="glyphicon glyphicon-map-marker"></span> <%= card.user.city.upcase %>, <%= card.user.state.upcase %></p>
@@ -32,3 +33,21 @@
 		<% end %>
 	</div>
 </div>
+
+<!-- show card modal html -->
+<div class="modal fade" id='<%= "showCardModal" %>' role="dialog" aria-labelledby="showCardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="showCardModalLabel">Show Card</h4>
+      </div>
+      <div class="modal-body">
+        <%= render 'pages/showCard' %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

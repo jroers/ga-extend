@@ -1,0 +1,20 @@
+<%= form_for @card do |f| %>
+    <% if @card.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@card.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <ul>
+            <% @card.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+    <p><%= f.label :family %>: <%= @card.family %></p>
+    <p><%= f.label :title %>: <%= @card.title %></p>
+    <p><%= f.label :working_on %>: <%= @card.working_on %></p>         
+    </div>
+  <% end %>
+    </div>

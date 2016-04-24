@@ -21,7 +21,7 @@
 							<%= card.family.upcase %>
 						<% end %>
 					</h5>
-					<p> <%= link_to "show card", card_path(card.id), 'data-target' => "#showCardModal", 'data-toggle' => 'modal' %> </p>
+					<p> <%= link_to "show card", {:controller => "cards", :action => "show", :id => card.id} %> </p>
 					<h5 class="title"><%= card.title.upcase %></h5>
 					<hr>
 					<p class="location pull-right"><span class="glyphicon glyphicon-map-marker"></span> <%= card.user.city.upcase %>, <%= card.user.state.upcase %></p>
@@ -43,7 +43,7 @@
         <h4 class="modal-title" id="showCardModalLabel">Show Card</h4>
       </div>
       <div class="modal-body">
-        <%= render 'pages/showCard' %>
+        <%= render 'cards/showCard' %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>

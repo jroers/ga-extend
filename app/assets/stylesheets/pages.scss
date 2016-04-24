@@ -29,11 +29,16 @@ $card-border: rgb(194, 209, 223);
 
 .btn-filter {
 	font-family: 'DINBold';
+	color: white;
 	border-radius: 0;
 	padding: 3px 12px;
 	margin-top: 10px;
 	margin-bottom: 20px;
-	width: 126px;
+	width: 140px;
+}
+
+.active {
+	color: black;
 }
 
 .btn-networking {
@@ -41,14 +46,26 @@ $card-border: rgb(194, 209, 223);
 	box-shadow: 0 5px $networking-shadow;
 }
 
+.btn.btn-networking.active {
+	color: black;
+}
+
 .btn-project {
 	background: $project;
 	box-shadow: 0 5px $project-shadow;
 }
 
+.btn.btn-project.active {
+	color: black;
+}
+
 .btn-skill-share {
 	background: $skill-share;
 	box-shadow: 0 5px $skill-share-shadow;
+}
+
+.btn.btn-skill-share.active {
+	color: black;
 }
 
 .btn-all {
@@ -58,10 +75,17 @@ $card-border: rgb(194, 209, 223);
 }
 
 .btn-all:hover {
-		background: #A5A5A5;
-		border-color: #A5A5A5;
-		box-shadow: 0 5px #7D7D7D;
-	}
+	background: #B9B9B9;
+	border-color: #A5A5A5;
+	color: white;
+	// box-shadow: 0 5px #7D7D7D;
+}
+
+.btn-all.active {
+	background: #A5A5A5;
+	border-color: #A5A5A5;
+	color: black;
+}
 
 .block{
 	border: 1px solid black;
@@ -157,11 +181,11 @@ hr {
 .name {
 	font-family: 'GABold';
 	font-weight: lighter;
-	font-size: 18px;
+	font-size: 20px;
 	margin-bottom: 0;
 }
 
 .current-position {
 	font-family: 'Georgia';
-	font-size: 18px;
+	font-size: 15px;
 }

@@ -21,8 +21,7 @@
 							<%= card.family.upcase %>
 						<% end %>
 					</h5>
-					<p> <%= link_to "show card", {:controller => "cards", :action => "show", :id => card.id} %> </p>
-					<h5 class="title"><%= card.title.upcase %></h5>
+					<h5 class="title"><%= link_to "#{card.title.upcase}", {:controller => "cards", :action => "show", :id => card.id} %> </h5>
 					<hr>
 					<p class="location pull-right"><span class="glyphicon glyphicon-map-marker"></span> <%= card.user.city.upcase %>, <%= card.user.state.upcase %></p>
 					<p class="name"><%= card.user.first.upcase %> <%= card.user.last.upcase %></p>

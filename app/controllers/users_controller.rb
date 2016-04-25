@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 		@card = Card.find_by_id(params[:card_id]) || Card.new()
 	end
 
+	# do you do anything?
 	def find_card
 		@card = Card.find(:card)
 	end

@@ -33,11 +33,11 @@
 	    		<br>
 	    	  <%= f.label :program %>
 	        <br>
-	        <%= f.text_field :program %>
+	        <%= f.select :program, [['Please Select a Program:', ''], ['ADI', 'ADI'], ['Back-End Web Development', 'Back-End Web Development'], ['Data Analytics','Data Analytics'], ['Data Science','Data Science'], ['Digital Marketing','Digital Marketing'], ['DSI','DSI'], ['Front-End Web Development','Front-End Web Development'], ['iOS Development','iOS Development'], ['JavaScript Development','JavaScript Development'], ['Product Management','Product Management'], ['PMI','PMI'], ['User Experience Design','User Experience Design'], ['UXDI','UXDI'], ['Visual Design','Visual Design'], ['WDI','WDI']] %>
 	        <br>
 	        <%= f.label :cohort %>
 	        <br>
-	        <%= f.text_field :cohort %>
+	        <%= f.number_field :cohort %>
 	        <br>
 	        <%= f.label :city %>
 	        <br>
@@ -55,7 +55,7 @@
 	        <%= f.text_area :current_title , class: "textBoxArea"%>
 	    </div>
 			<div class="col-md-8">
-				<%= f.label :image %> <br />
+				<%= f.label "Profile Photo" %> <br />
 				<%= f.file_field :image %>
 			</div>
     </div>

@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
 
 	validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
+	# Data validations
+	validates :first, :last, :email, :password, presence: true, length: {maximum: 255}
+	validates :password, length: { minimum: 3, message: "must be at least 3 characters" }
+	validates :email, uniqueness: true, format: { with: /@/ }, length: { minimum: 6 }
 
 	def self.confirm(params)
     @user = User.find_by({email: params[:email]})

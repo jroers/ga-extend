@@ -31,12 +31,14 @@ class CardsController < ApplicationController
 	def update
 		@card = get_card
 		@card.update_attributes(card_params)
+		flash[:notice] = "card updated"
 		redirect_to user_path(current_user)
 	end
 
 	def destroy
 		@card = get_card
 		@card.destroy
+		flash[:notice] = "Deleted card"
 		redirect_to user_path(current_user)
 	end
 

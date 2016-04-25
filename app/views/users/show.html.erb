@@ -49,6 +49,27 @@
 			</div>
 		<% end %>
 	</div>
+
+	<div class="col-md-7 col-md-offset-1">
+		<% @cards.each do |card| %>
+				<div class="card <%= card.family %>">
+					<h5 class="flag flag-<%= card.family %> pull-right">
+						<% if card.family == "skill_share" %>
+							SKILL SHARE
+						<% else %>
+							<%= card.family.upcase %>
+						<% end %>
+					</h5>
+					<h5 class="title"><%= card.title.upcase %> </h5>
+					<hr>
+					<p class="location pull-right"><span class="glyphicon glyphicon-map-marker"></span> <%= card.user.city.upcase %>, <%= card.user.state.upcase %></p>
+					<p class="name"><%= card.user.first.upcase %> <%= card.user.last.upcase %></p>
+					<p class="current-position"><%= card.user.current_title %></p>
+					<p class="centered"><%= link_to "Edit Card", edit_card_path(card.id), class: 'btn btn-warning', 'data-target' => "#editCardModal", 'data-toggle' => 'modal' %>
+				<%= link_to "Delete Card", delete_card_path(card.id), method: :delete, class: "btn btn-danger" %></p>
+				</div>
+		<% end %>
+	</div>
 </div>
 
 <!-- profile modal html -->

@@ -21,6 +21,12 @@ $card-border: rgb(194, 209, 223);
 	font-family: 'Georgia';
 	src: url(asset-path('fonts/Georgia.ttf'));
 }
+
+.button_label{
+	text-align: center;
+	font-size: 24px;
+}
+
 .btn {
 	position: relative;
 	display: inline-block;
@@ -34,7 +40,7 @@ $card-border: rgb(194, 209, 223);
 	padding: 3px 12px;
 	margin-top: 10px;
 	margin-bottom: 20px;
-	width: 140px;
+	width: 160px;
 }
 
 .active {

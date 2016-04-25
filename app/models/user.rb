@@ -9,8 +9,8 @@ class User < ActiveRecord::Base
 	validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
 	# Data validations
-	validates :first, :last, :email, :password, presence: true, length: {maximum: 255}
-	validates :password, length: { minimum: 3, message: "must be at least 3 characters" }
+	validates :first, :last, :email, presence: true, length: {maximum: 255}
+	validates :password, length: { minimum: 3, message: "must be at least 3 characters" }, allow_nil: true
 	validates :email, uniqueness: true, format: { with: /@/, message: "must be a valid Eamil address" }, length: { minimum: 6 }
 
 	def self.confirm(params)

@@ -23,9 +23,9 @@
 			</div>
 			<div class="panel-footer">
 			<!-- modal button -->
-				<%= link_to "Edit Profile", "#", class: 'btn btn-warning', 'data-target' => "#editProfileModal_#{current_user.id}", 'data-toggle' => 'modal'  %>
+				<%= link_to "Edit Profile", class: 'btn btn-warning', 'data-target' => "#editProfileModal_#{current_user.id}", 'data-toggle' => 'modal' do %><i class="glyphicon glyphicon-pencil"></i> Edit Profile<% end %>
 			<!-- new card modal button -->
-				<%= link_to "Add new Card", "#", class: 'btn btn-warning pull-right', 'data-target' => "#newCardModal", 'data-toggle' => 'modal'  %>
+				<%= link_to "Add new Card", class: 'btn btn-warning pull-right','data-target' => "#newCardModal", 'data-toggle' => 'modal' do %> <i class="glyphicon glyphicon-plus"></i> Add New Card<% end %>
 			</div> 
 		</div>
 	</div>
@@ -49,8 +49,8 @@
 					<hr>
 					<br>
 					<p class="working_on"><strong>Description: </strong> <%= card.working_on %> </p>
-					<p class="centered"><%= link_to "Edit Card", edit_card_path(card.id), class: 'btn btn-warning', 'data-target' => "#editCardModal", 'data-toggle' => 'modal' %>
-				<%= link_to "Delete Card", delete_card_path(card.id), method: :delete, class: "btn btn-danger" %></p>
+					<p class="centered"><%= link_to edit_card_path(card.id), class: 'btn btn-warning', 'data-target' => "#editCardModal", 'data-toggle' => 'modal' do %><i class="glyphicon glyphicon-pencil"></i> Edit Profile<% end %>
+				<%= link_to delete_card_path(card.id), method: :delete, class: "btn btn-danger" do  %><i class="glyphicon glyphicon-trash"></i> Delete Card<% end %></p>
 				</div>
 		<% end %>
 	</div>

@@ -17,12 +17,11 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find_by_id(params[:id])
-		if @user != current_user
+		if @user.id != current_user.id
 			redirect_to user_path(current_user)
-		else
+		end
 		@cards = @user.cards.order("created_at DESC")
 		@card = Card.find_by_id(params[:card_id]) || Card.new()
-		end
 	end
 
 	# do you do anything?

@@ -49,10 +49,10 @@
 					<p class="current-position"> <%= card.user.current_title %></p>
 					<hr>
 					<br>
-					<p class="working_on"><strong>Description: </strong> <%= card.working_on %> </p>
+					<p class="profile-text">Description: <%= card.working_on %> </p>
 					<div class="centered"><%= link_to edit_card_path(card.id), class: 'btn btn-warning', 'data-target' => "#editCardModal", 'data-toggle' => 'modal' do %><i class="glyphicon glyphicon-pencil"></i> Edit Profile<% end %>
 				<%= link_to delete_card_path(card.id), method: :delete, class: "btn btn-danger" do  %><i class="glyphicon glyphicon-trash"></i> Delete Card<% end %></div>
-				<div class="profile-time">Created <%= time_ago_in_words(card.created_at).gsub('about','') + ' ago'  %></<div>
+				<div class="profile-time">Created <%= time_ago_in_words(card.created_at).gsub('about','') + ' ago'  %></div>
 				</div>
 		<% end %>
 	</div>

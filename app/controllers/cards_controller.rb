@@ -20,7 +20,6 @@ class CardsController < ApplicationController
 
 	def show
 		@card = get_card
-		render :partial => "showCard"
 	end
 
 	def edit

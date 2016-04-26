@@ -15,10 +15,10 @@
 					<% end %>
 				</div>
 				<div class="col-md-7 profile">
-				<p><strong>Email:</strong> <br> <%= @user.email %></p>
-				<p><strong>Program:</strong> <br> <%= @user.program %> <%= @user.cohort %></p>
-				<p><strong>Current Title:</strong> <br> <%= @user.current_title %></p>
-				<p><strong>Current City:</strong> <br> <%= @user.city %>, <%= @user.state %></p>
+				<p class="profile-title"><strong>Email:</strong></p> <p class="profile-text">  <%= @user.email %></p>
+				<p class="profile-title"><strong>Program:</strong> </p> <p class="profile-text"> <%= @user.program %> <%= @user.cohort %></p>
+				<p class="profile-title"><strong>Current Title:</strong> </p> <p class="profile-text"> <%= @user.current_title %></p>
+				<p class="profile-title"><strong>Current City:</strong> </p> <p class="profile-text"> <%= @user.city %>, <%= @user.state %></p>
 				</div>
 			</div>
 			<div class="panel-footer">
@@ -33,25 +33,6 @@
  <!-- card container -->
 	<div class="col-md-7 col-md-offset-1">
 		<% @cards.each do |card| %>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-				<strong>Type:</strong> <%= card.family %>
-				</div>
-			<div class="panel-body">
-				<p><strong>Title:</strong><br><%= card.title %> </p>
-				<p><strong>Description:</strong><br><%= card.working_on %> </p>
-
-			</div>
-			<div class="panel-footer">
-				<%= link_to "Edit Card", edit_card_path(card.id), class: 'btn btn-warning', 'data-target' => "#editCardModal", 'data-toggle' => 'modal' %>
-				<%= link_to "Delete Card", delete_card_path(card.id), method: :delete, class: "btn btn-danger" %>
-			</div>
-			</div>
-		<% end %>
-	</div>
-
-	<div class="col-md-7 col-md-offset-1">
-		<% @cards.each do |card| %>
 				<div class="card <%= card.family %>">
 					<h5 class="flag flag-<%= card.family %> pull-right">
 						<% if card.family == "skill_share" %>
@@ -64,7 +45,10 @@
 					<hr>
 					<p class="location pull-right"><span class="glyphicon glyphicon-map-marker"></span> <%= card.user.city.upcase %>, <%= card.user.state.upcase %></p>
 					<p class="name"><%= card.user.first.upcase %> <%= card.user.last.upcase %></p>
-					<p class="current-position"><%= card.user.current_title %></p>
+					<p class="current-position"> <%= card.user.current_title %></p>
+					<hr>
+					<br>
+					<p class="working_on"><strong>Description: </strong> <%= card.working_on %> </p>
 					<p class="centered"><%= link_to "Edit Card", edit_card_path(card.id), class: 'btn btn-warning', 'data-target' => "#editCardModal", 'data-toggle' => 'modal' %>
 				<%= link_to "Delete Card", delete_card_path(card.id), method: :delete, class: "btn btn-danger" %></p>
 				</div>

@@ -9,7 +9,7 @@
 				<div class="col-md-4 profile"> 
 					<% if @user.image? %>
 						<%= image_tag @user.image.url(:thumb), class: "profile_pic" %> <br> <br>
-						<%= link_to 'Delete Photo', delete_photo_path, method: :put, class: "profile_pic" %>
+						<%= link_to 'DELETE PHOTO', delete_photo_path, method: :put, class: "profile_pic" %>
 					<% else %>
 						<%= image_tag "/assets/default.png", size: "100", class: "profile_pic" %>
 					<% end %>

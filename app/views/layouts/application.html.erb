@@ -46,9 +46,9 @@
   <!-- flash notices -->
     <% flash.each do |name, msg| %>
     <% if name == "error" %>
-      <p class="alert-danger">
+      <p class="alert-danger centered">
     <% else %>
-      <p class="alert-success">
+      <p class="alert-success centered">
     <% end %>
       <small> <%= name.capitalize %>: <%= msg %> </small>
     </p>

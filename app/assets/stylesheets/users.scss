@@ -13,9 +13,14 @@
 	border-radius: 50px;
 }
 
+a.profile_pic {
+	font-family: 'DINBold';
+}
+
 .profile {
 	position: relative;
 	display: inline-block;
+	text-align: center;
 }
 
 .btn .btn-warning {

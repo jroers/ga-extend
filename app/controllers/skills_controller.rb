@@ -11,7 +11,6 @@ class SkillsController < ApplicationController
 		@skill = Skill.new(skill_params)
 		if @skill.save
 			flash[:notice] = "Skill saved"
-			
 		else
 			flash[:notice] = "Something went wrong"
 		end

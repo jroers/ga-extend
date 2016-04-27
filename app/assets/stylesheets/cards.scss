@@ -7,3 +7,8 @@ $networking-shadow: #A74134;
 .btn.btn-email.btn-primary {
 	box-shadow: 0 5px #395F80;
 }
+
+.btn.btn-back {
+	background: $networking;
+	box-shadow: 0 5px $networking-shadow;
+}

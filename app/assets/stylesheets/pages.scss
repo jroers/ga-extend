@@ -217,14 +217,45 @@ hr {
 	margin-top: -20px;
 }
 .jumbotron p {
-		font-size: 36px;
-		
+	font-size: 34px;
 }
 
 .jumbo_text{
 	font-family: 'GABold';
 	color: white;
 	position: relative;
-	bottom: -150px;
+	top: 112px;
+}
 
+@media (max-width: 768px) {
+	.jumbo_text{
+		top: 130px;
+	}
+}
+
+@media (max-width: 519px) {
+	.jumbotron p {
+		font-size: 22px;
+	}
+	.jumbo_text {
+		top: 145px;
+	}
+}
+
+@media (max-width: 374px) {
+	.btn-filter {
+		width: 135px;
+	}
+}
+
+@media (max-width: 320px) {
+	.btn-filter {
+		width: 115px;
+	}
+	.jumbotron p {
+		font-size: 20px;
+	}
+	.jumbo_text {
+		top: 148px
+	}
 }

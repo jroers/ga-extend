@@ -265,8 +265,31 @@ hr {
 	font-family: 'GABold';
 	font-size: 36px;
 }
+<<<<<<< Updated upstream
 
 .about_text {
 	font-family: 'Georgia';
 	font-size: 14px;
 }
+=======
+
+.about_text {
+	font-family: 'Georgia';
+	font-size: 14px;
+}
+
+.about_text_bold {
+	font-family: 'Georgia';
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.left_margin {
+	margin-left: 10px;
+}
+
+.right_margin {
+	position: relative;
+	right: -25px;
+}
+>>>>>>> Stashed changes

@@ -1,3 +1,9 @@
 // Place all the styles related to the cards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$networking: rgb(204,94,80);
+$networking-shadow: #A74134;
+
+.btn.btn-email.btn-primary {
+	box-shadow: 0 5px #395F80;
+}

@@ -16,7 +16,8 @@
 		<br>
 		<p class="working_on"><strong>Description: </strong> <%= @card.working_on %> </p>
 		<div class="centered">
-			<button class="btn btn-primary btn-email btn-filter"><a href="mailto:<%= @card.user.email %>">CONTACT ME <span class="glyphicon glyphicon-envelope"></span></a></button>
+			<%= link_to "mailto:#{@card.user.email}", class: 'btn btn-primary btn-email btn-filter' do %> <i class="glyphicon glyphicon-envelope"></i> CONTACT ME<% end %>
+			<%= link_to root_path, class: 'btn btn-danger btn-networking btn-filter' do %> BACK<% end %>
 		</div>
 	</div>
 	<div class="profile-time">Created <%= time_ago_in_words(@card.created_at).gsub('about','') %> ago</div>

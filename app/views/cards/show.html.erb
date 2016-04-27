@@ -15,6 +15,9 @@
 		<hr>
 		<br>
 		<p class="working_on"><strong>Description: </strong> <%= @card.working_on %> </p>
+		<div class="centered">
+			<button class="btn btn-primary btn-email btn-filter"><a href="mailto:<%= @card.user.email %>">CONTACT ME <span class="glyphicon glyphicon-envelope"></span></a></button>
+		</div>
 	</div>
 	<div class="profile-time">Created <%= time_ago_in_words(@card.created_at).gsub('about','') %> ago</div>
 </div>

@@ -26,7 +26,7 @@
 			<!-- modal button -->
 				<%= link_to "Edit Profile", class: 'btn btn-warning', 'data-target' => "#editProfileModal_#{current_user.id}", 'data-toggle' => 'modal' do %><i class="glyphicon glyphicon-pencil"></i> Edit Profile<% end %>
 			<!-- new card modal button -->
-				<%= link_to "Add new Card", class: 'btn btn-warning pull-right','data-target' => "#newCardModal", 'data-toggle' => 'modal' do %> <i class="glyphicon glyphicon-plus"></i> Add New Card<% end %>
+				<%= link_to "Add new Card", class: 'btn btn-warning pull-right','data-target' => "#newCardModal", 'data-toggle' => 'modal' do %> <i class="glyphicon glyphicon-plus"></i> New Card<% end %>
 			</div> 
 		</div>
 	</div>
@@ -34,34 +34,35 @@
  <!-- card container -->
 	<div class="col-md-7 col-md-offset-1">
 		<% @cards.each do |card| %>
-				<div class="card <%= card.family %>">
-					<h5 class="flag flag-<%= card.family %> pull-right">
-						<% if card.family == "skill_share" %>
-							SKILL SHARE
-						<% else %>
-							<%= card.family.upcase %>
-						<% end %>
-					</h5>
-					<h5 class="title"><%= card.title.upcase %> </h5>
+			<div class="card <%= card.family %>">
+				<h5 class="flag flag-<%= card.family %> pull-right">
+					<% if card.family == "skill_share" %>
+						SKILL SHARE
+					<% else %>
+						<%= card.family.upcase %>
+					<% end %>
+				</h5>
+				<h5 class="title"><%= card.title.upcase %> </h5>
 
-					<hr>
-					<!-- left side (user info) -->
-					<div class="col-md-4 left">
-					<br>
-					<p class="name"><%= card.user.first.upcase %> <%= card.user.last.upcase %></p>
-					<p class="current-position"> <%= card.user.current_title %></p> </div>
+				<hr>
+				<!-- left side (user info) -->
+				<div class="col-md-4 left">
+				<br>
+				<p class="name"><%= card.user.first.upcase %> <%= card.user.last.upcase %></p>
+				<p class="current-position"> <%= card.user.current_title %></p> </div>
 
-					<!-- right side (card info) -->
-					<div class="col-md-6 col-md-offset-1 right"> <p class="location pull-right"><span class="glyphicon glyphicon-map-marker"></span> <%= card.user.city.upcase %>, <%= card.user.state.upcase %></p><br><p class="profile-title">Description:</p> <%= card.working_on %>  <br> </div>
+				<!-- right side (card info) -->
+				<div class="col-md-6 col-md-offset-1 right"> <p class="location pull-right"><span class="glyphicon glyphicon-map-marker"></span> <%= card.user.city.upcase %>, <%= card.user.state.upcase %></p><br><p class="profile-title">Description:</p> <%= card.working_on %>  <br> </div>
 
-					<!-- bottom (buttons and timestamp) -->
-					<div class="col-md-12 container">
-
-							<div class="centered"><%= link_to edit_card_path(card.id), class: 'btn btn-warning', 'data-target' => "#editCardModal", 'data-toggle' => 'modal' do %><i class="glyphicon glyphicon-pencil"></i> Edit Profile<% end %>
-						<%= link_to delete_card_path(card.id), method: :delete, class: "btn btn-danger" do  %><i class="glyphicon glyphicon-trash"></i> Delete Card<% end %></div>
-						<div class="profile-time">Created <%= time_ago_in_words(card.created_at).gsub('about','') + ' ago'  %></div>
+				<!-- bottom (buttons and timestamp) -->
+				<div class="col-md-12 container">
+					<div class="centered">
+						<%= link_to edit_card_path(card.id), class: 'btn btn-warning', 'data-target' => "#editCardModal", 'data-toggle' => 'modal' do %><i class="glyphicon glyphicon-pencil"></i> Edit<% end %>
+						<%= link_to delete_card_path(card.id), method: :delete, class: "btn btn-danger" do  %><i class="glyphicon glyphicon-trash"></i> Delete Card<% end %>
+					</div>
 				</div>
-				</div>
+			</div>
+			<div class="profile-time">Created <%= time_ago_in_words(card.created_at).gsub('about','') %> ago</div>
 		<% end %>
 	</div>
 </div>

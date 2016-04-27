@@ -102,8 +102,6 @@ img.navIcon {
 
 .block{
 	border: 1px solid black;
-	min-height: 600px;
-	text-align: center;
 }
 
 .centered {
@@ -203,12 +201,12 @@ hr {
 	font-size: 15px;
 }
 
-.navIcon{
+.navIcon {
 	margin-top: -15px;
 	margin-left: -15px;
 }
 
-.jumbotron{
+.jumbotron {
 	background-image: url('Jumbo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -219,13 +217,18 @@ hr {
 	margin-bottom: 5px;
 }
 .jumbotron p {
+<<<<<<< Updated upstream
 	font-size: 34px;
+=======
+		font-size: 36px;
+>>>>>>> Stashed changes
 }
 
-.jumbo_text{
+.jumbo_text {
 	font-family: 'GABold';
 	color: white;
 	position: relative;
+<<<<<<< Updated upstream
 	top: 116px;
 }
 
@@ -260,4 +263,32 @@ hr {
 	.jumbo_text {
 		top: 148px
 	}
+=======
+	bottom: -150px;
+}
+
+.about_title {
+	font-family: 'GABold';
+	font-size: 36px;
+}
+
+.about_text {
+	font-family: 'Georgia';
+	font-size: 14px;
+}
+
+.about_text_bold {
+	font-family: 'Georgia';
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.left_margin {
+	margin-left: 10px;
+}
+
+.right_margin {
+	position: relative;
+	right: -25px;
+>>>>>>> Stashed changes
 }

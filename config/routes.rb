@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/', to: 'pages#home'
+  get '/about', to: 'pages#about', as: 'about'
 
   get '/users', to: 'users#index', as: 'users'
   get '/signup', to: 'users#new', as: 'signup'

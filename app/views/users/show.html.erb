@@ -43,8 +43,6 @@
 					<% end %>
 				</h5>
 				<h5 class="title"><%= card.title.upcase %> </h5>
-
-				<hr>
 				<!-- left side (user info) -->
 				<div class="col-md-4 left">
 				<br>
@@ -52,13 +50,13 @@
 				<p class="current-position"> <%= card.user.current_title %></p> </div>
 
 				<!-- right side (card info) -->
-				<div class="col-md-6 col-md-offset-1 right"> <p class="location pull-right"><span class="glyphicon glyphicon-map-marker"></span> <%= card.user.city.upcase %>, <%= card.user.state.upcase %></p><br><p class="profile-title">Description:</p> <%= card.working_on %>  <br> </div>
+				<div class="col-md-6 col-md-offset-1 right"> <p class="location pull-right"><span class="glyphicon glyphicon-map-marker"></span> <%= card.user.city.upcase %>, <%= card.user.state.upcase %></p><br><p class="profile-title">WORKING ON:</p> <%= card.working_on %>  <br> </div>
 
 				<!-- bottom (buttons and timestamp) -->
 				<div class="col-md-12 container">
 					<div class="centered">
-						<%= link_to edit_card_path(card.id), class: 'btn btn-warning', 'data-target' => "#editCardModal", 'data-toggle' => 'modal' do %><i class="glyphicon glyphicon-pencil"></i> Edit<% end %>
-						<%= link_to delete_card_path(card.id), method: :delete, class: "btn btn-danger" do  %><i class="glyphicon glyphicon-trash"></i> Delete Card<% end %>
+						<%= link_to edit_card_path(card.id), class: 'btn btn-warning', 'data-target' => "#editCardModal", 'data-toggle' => 'modal' do %><i class="glyphicon glyphicon-pencil"></i><% end %>
+						<%= link_to delete_card_path(card.id), method: :delete, class: "btn btn-danger" do  %><i class="glyphicon glyphicon-trash"></i><% end %>
 					</div>
 				</div>
 			</div>

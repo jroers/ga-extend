@@ -291,3 +291,37 @@ hr {
 	position: relative;
 	margin-left: 150px;
 }
+
+// ABOUT PAGE-SPECIFIC STYLING:
+.about_title {
+	text-align: center;
+}
+
+.about_profile {
+	margin-bottom: 15px;
+}
+
+.about_photo {
+	border-radius: 50%;
+}
+
+.links {
+	.col-xs-2 {
+		padding: 0;
+	}
+	a {
+		color: black;
+	}
+}
+
+.devs {
+	margin-bottom: 20px;
+}
+
+.designer {
+	margin-bottom: 20px;
+}
+
+.product-managers {
+	margin-bottom: 100px;
+}

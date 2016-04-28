@@ -278,10 +278,16 @@ hr {
 }
 
 .left_margin {
+	position: relative;
 	margin-left: 10px;
 }
 
 .right_margin {
 	position: relative;
 	right: -25px;
+}
+
+.little_left {
+	position: relative;
+	margin-left: 150px;
 }

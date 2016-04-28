@@ -16,13 +16,12 @@
         <br>
         <%= f.select :family, [['Project', 'project'], ['Skill Share', 'skill_share'], ['Networking','networking']] %>
         <br>
-        <%= f.label :title %>
+        <strong>Card Title:</strong> 
         <br>
-        <%= f.text_field :title %>
+        <%= f.text_field :title, class: "form-control" %>
+        <strong>Card description:</strong>
         <br>
-        <%= f.label :working_on %>
-        <br>
-        <%= f.text_area :working_on %>
+        <%= f.text_area :working_on, class: "form-control" %>
         <%= f.hidden_field :user_id, value: current_user.id%>
         
     </div>
